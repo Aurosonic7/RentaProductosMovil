@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonCol, IonList, IonButton, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonSegment, IonSegmentButton, IonTitle, IonToggle, IonToolbar, IonGrid, IonRow } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { eye, lockClosed, mailOutline } from 'ionicons/icons';
+import { discOutline, eye, lockClosed, mailOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-login',
@@ -34,11 +34,18 @@ import { eye, lockClosed, mailOutline } from 'ionicons/icons';
 })
 export class LoginPage implements OnInit {
 
+  // Cambiar 'value' a 'segmentValue' para coincidir con la plantilla
+  segmentValue: string = 'Login'; 
+
   constructor() { 
-    addIcons({eye,lockClosed, mailOutline});
+    addIcons({ eye, lockClosed, mailOutline, discOutline });
   }
 
   ngOnInit() {
   }
+
+  setLogin() { this.segmentValue = 'Login'; }
+  
+  setRegister() { this.segmentValue = 'Register'; }
 
 }
