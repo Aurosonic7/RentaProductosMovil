@@ -1,63 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
 
-  <div class="container">
+  <ion-grid class="bgContent" >
+    <ion-row >
+      <ion-col class="containerForm ion-text-center" size="8" offset="2"  >
+        <img class="imageLogo" src="assets/Logo2.png" alt="bienvenida">
+        <br>
+        <ion-segment mode="ios" value="Login" class="buttonSegment">
+          <ion-segment-button  value="Login"> <label>Login</label> </ion-segment-button>
+          <ion-segment-button value="Register"><label>Registro</label></ion-segment-button>
+        </ion-segment>
 
-  <div class="login-container">
-    <div class="botton-segment">
-      <ion-segment value="login">
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
 
-        <ion-segment-button value="login"> 
-          <ion-label>Log In</ion-label> 
-        </ion-segment-button>
-        
-        <ion-segment-button value="signup"> 
-          <ion-label>Sign Up</ion-label> 
-        </ion-segment-button>
-
-      </ion-segment>
-    </div>
-
-    <div class="form-container">
-      <ion-list>
-        <ion-item>
-          <ion-input labelPlacement="stacked" type="mail" label="E-mail" placeholder="correo@email.com">
-            <ion-icon name="mail-outline"></ion-icon>
-            <ion-button fill="clear" slot="end" aria-label="Show/hide">
-            </ion-button>
-          </ion-input>
-        </ion-item>
-      </ion-list>
-
-      <ion-list>
-        <ion-item>
-          <ion-input labelPlacement="stacked" type="password" label="password" placeholder="********">
-            <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
-            <ion-button fill="clear" slot="end" aria-label="Show/hide">
-              <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
-            </ion-button>
-          </ion-input>
-        </ion-item>
-      </ion-list>
-
-      <ion-item lines="none">
-        <ion-label>Olvide mi contraseña</ion-label>
-        <ion-toggle></ion-toggle>
-      </ion-item>
-
-      <div class="message-container">
-        <p>message <span class="success">successful</span> or <span class="error">error</span></p>
-      </div>
-
-      <ion-button expand="block" color="primary">Log In</ion-button>
-    </div>
-  </div>
-
-
-
-</div>
+</ion-content>
