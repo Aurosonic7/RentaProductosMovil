@@ -37,8 +37,15 @@
         <!-- Register Form -->
         <div *ngIf="segmentValue === 'Register'">
           <h2 class="titles">Register</h2>
-          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="username" label="Username" placeholder="Username"></ion-input>
-          
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="text" label="Username" placeholder="Username"></ion-input>
+          <br />
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="text" label="E-mail" placeholder="example@email.com"></ion-input>
+          <br />
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="password" label="Password" placeholder="********"></ion-input>
+          <br />
+          <label>message successful or error</label>
+          <br />
+          <ion-button expand="block" color="primary">Sign In</ion-button>
         </div>
       </ion-col>
     </ion-row>
