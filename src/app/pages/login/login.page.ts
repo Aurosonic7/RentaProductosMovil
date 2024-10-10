@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonCol, IonList, IonButton, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonSegment, IonSegmentButton, IonTitle, IonToggle, IonToolbar, IonGrid, IonRow } from '@ionic/angular/standalone';
+import { AlertController } from '@ionic/angular';
+import { IonImg, IonCard,IonCol, IonList, IonButton, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonSegment, IonSegmentButton, IonTitle, IonToggle, IonToolbar, IonGrid, IonRow } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { discOutline, eye, lockClosed, mailOutline } from 'ionicons/icons';
 
@@ -11,6 +12,8 @@ import { discOutline, eye, lockClosed, mailOutline } from 'ionicons/icons';
   styleUrls: ['./login.page.scss'],
   standalone: true,
   imports: [
+    IonImg,
+    IonCard,
     IonGrid,
     IonCol,
     IonRow,
@@ -37,15 +40,21 @@ export class LoginPage implements OnInit {
   // Cambiar 'value' a 'segmentValue' para coincidir con la plantilla
   segmentValue: string = 'Login'; 
 
-  constructor() { 
+  constructor(private alertCtrl: AlertController) { 
     addIcons({ eye, lockClosed, mailOutline, discOutline });
   }
 
   ngOnInit() {
   }
-
-  setLogin() { this.segmentValue = 'Login'; }
   
-  setRegister() { this.segmentValue = 'Register'; }
+  async login() {
+    const alert = await this.alertCtrl.create({
+      header: 'Login',
+      subHeader: 'Información importante',
+      message: 'Esta información es importante para nuestra APP',
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
 
 }

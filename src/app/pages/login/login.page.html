@@ -1,50 +1,44 @@
-<ion-content [fullscreen]="true">
-  <ion-grid class="bgContent">
+<ion-content [fullscreen]="true" mode="md">
+  <div class="background">
+    <ion-img src="../../../assets/image.jpg"></ion-img>
+  </div>
+  <ion-grid >
     <ion-row>
       <ion-col class="containerForm ion-text-center" size="8" offset="2">
         <img class="imageLogo" src="assets/Logo2.png" alt="bienvenida">
         <br>
-        <ion-segment mode="ios" [(ngModel)]="segmentValue" class="buttonSegment">
-          <ion-segment-button value="Login" (click)="setLogin()"> <label>Login</label> </ion-segment-button>
-          <ion-segment-button value="Register" (click)="setRegister()"><label>Registro</label></ion-segment-button>
+        <ion-segment mode="ios" [(ngModel)]="segmentValue" class="buttonSegment" >
+          <ion-segment-button value="Login"> <h5 class="tituloSegment">Log In</h5> </ion-segment-button>
+          <ion-segment-button value="Register"><h5 class="tituloSegment">Sign Up</h5></ion-segment-button>
         </ion-segment>
         <br>
-        
         <!-- Login Form -->
-        <div *ngIf="segmentValue === 'Login'">
-          <h2>Log In</h2>
-
-          <ion-input label-placement="floating" fill="outline" type="email" label="Email" placeholder="email@email.com">
-            <ion-icon slot="end" name="mail-outline" aria-hidden="true"></ion-icon>
-            <ion-button fill="clear" slot="end" aria-label="Show/hide"></ion-button>
+        <div class="loginCard" *ngIf="segmentValue === 'Login'">
+          <h2 class="titles">Log In</h2>
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="email" label="E-mail" placeholder="email@email.com">
           </ion-input>
           <br>
-
-          <ion-input label-placement="floating" fill="outline" type="password" label="Password" placeholder="********">
-            <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="password" label="Password" placeholder="********">
             <ion-button fill="clear" slot="end" aria-label="Show/hide">
               <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
             </ion-button>
           </ion-input>
           <br>
-
-          <ion-list lines="none">
-            <ion-item>
+            <ion-item class="background2">
               <ion-toggle [checked]="false"></ion-toggle><br /><br />
               <ion-icon slot="start" name="disc-outline"></ion-icon>
               <a href="/">Olvide contraseña</a>
             </ion-item>
-          </ion-list>
-          <br />
-
           <label>message successful or error</label>
           <br />
-          <ion-button>Log In</ion-button>
+          <ion-button expand="block" color="primary">Log In</ion-button>
         </div>
 
         <!-- Register Form -->
         <div *ngIf="segmentValue === 'Register'">
-          <h2>Register</h2>
+          <h2 class="titles">Register</h2>
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="username" label="Username" placeholder="Username"></ion-input>
+          
         </div>
       </ion-col>
     </ion-row>
