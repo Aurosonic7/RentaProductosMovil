@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="parent">
+    @for(item of adminItems; track $index){
+    <ion-button expand="block" class="custom-button">
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      {{ item.label }}
+    </ion-button>
+    }
+  </div>
+</ion-content>

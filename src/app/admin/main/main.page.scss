@@ -1,0 +1,42 @@
+ion-content {
+  --background: black;
+  position: relative; /* Necesario para el posicionamiento absoluto del hijo */
+  height: 100vh;
+}
+
+.parent {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 60%; /* Mueve el div a la mitad de la altura */
+  left: 50%; /* Mueve el div a la mitad del ancho */
+  transform: translate(-50%, -50%); /* Centra el div horizontal y verticalmente */
+  background-color: #333; /* Fondo gris oscuro */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 20px;
+  width: 90%; /* Para darle un tamaño relativo al ancho */
+  max-width: 400px; /* Tamaño máximo */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre botones */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor */
+    line-height: 1em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.custom-button {
+  --background: #2563eb; /* Fondo azul para los botones */
+  --border-radius: 20px; /* Bordes redondeados de los botones */
+  --padding-start: 15px;
+  --padding-end: 15px;
+  --color: white; /* Texto blanco */
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para los botones */
+  font-size: 18px;
+  height: 60px; /* Altura del botón */
+  display: flex;
+  align-items: center;
+}
+
+ion-icon {
+  font-size: 24px; /* Tamaño de los íconos */
+  color: white; /* Color del ícono */
+}
