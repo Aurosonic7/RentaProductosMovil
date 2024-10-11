@@ -1,12 +1,48 @@
-.bienvenida-logo {
-   align-items: center;
-   display: flex;
-   justify-content: center;
-    margin-top: 25vh;
+.background {
+  --background: url("../../../assets/bgLogin.png") no-repeat center center;
+  --background-size: cover; /* Hace que la imagen cubra todo el fondo */
 }
 
-.bienvenida-text {
-  display: flex;
-  justify-content: center;
-  margin-top: 20vh;
+
+.containerForm {
+  margin-top: 30vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 30%; /* Ajusta el ancho del contenedor, 90% del ancho total */
+  height: auto; /* Cambiar a auto para ajustarse al contenido */
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  padding: 20px; /* Añadir padding para mejorar el espaciado interno */
 }
+
+.titles {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.inputStyles {
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: bold;
+  /* Estilos para el borde */
+  --border-color: white; /* Cambiar el color del borde a blanco */
+  --border-width: 2px; /* Aumentar el grosor del borde */
+  --background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para el input */
+}
+
+.custom-button {
+  --background: #2563eb; /* Fondo azul para los botones */
+  --border-radius: 20px; /* Bordes redondeados de los botones */
+  --padding-start: 15px;
+  --padding-end: 15px;
+  --color: white; /* Texto blanco */
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para los botones */
+  font-size: 18px;
+  height: 60px; /* Altura del botón */
+}
+
+.imageLogo {
+  margin-top: -50px; /* Ajusta esto según sea necesario */
+  animation: circle-in-hesitate 2.5s cubic-bezier(.25, 1, .30, 1) forwards; /* Asegúrate de que la animación se aplique */
+}
+

@@ -1,53 +1,74 @@
-<ion-content [fullscreen]="true" mode="md">
-  <div class="background">
-    <ion-img src="../../../assets/image.jpg"></ion-img>
+<ion-content [fullscreen]="true" mode="md" [ngClass]="{ 'background': !showWelcomeImage }" #content>
+  <div *ngIf="showWelcomeImage" class="bienvenida-logo">
+    <img src="assets/logo.png" alt="bienvenida" class="bienvenida-img">
+    <div class="bienvenida-text">
+      <h1>Click&Rent</h1>
+    </div>
   </div>
-  <ion-grid >
+  
+  <div *ngIf="!showWelcomeImage" class="explosion-animation">
+  <ion-grid>
     <ion-row>
-      <ion-col class="containerForm ion-text-center" size="8" offset="2">
-        <img class="imageLogo" src="assets/Logo2.png" alt="bienvenida">
-        <br>
-        <ion-segment mode="ios" [(ngModel)]="segmentValue" class="buttonSegment" >
-          <ion-segment-button value="Login"> <h5 class="tituloSegment">Log In</h5> </ion-segment-button>
-          <ion-segment-button value="Register"><h5 class="tituloSegment">Sign Up</h5></ion-segment-button>
+      <ion-col class="containerForm ion-text-center" size="10" offset="1">
+        <img class="imageLogo" src="assets/Logo2.png" alt="bienvenida" />
+        <br />
+        <ion-segment mode="ios" [(ngModel)]="segmentValue" class="buttonSegment">
+          <ion-segment-button value="Login">
+            <h5 class="tituloSegment">Log In</h5>
+          </ion-segment-button>
+          <ion-segment-button value="Register">
+            <h5 class="tituloSegment">Sign Up</h5>
+          </ion-segment-button>
         </ion-segment>
-        <br>
+        <br />
+
         <!-- Login Form -->
-        <div class="loginCard" *ngIf="segmentValue === 'Login'">
+        <ng-container *ngIf="segmentValue === 'Login'">
           <h2 class="titles">Log In</h2>
-          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="email" label="E-mail" placeholder="email@email.com">
-          </ion-input>
-          <br>
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="email" label="E-mail" placeholder="email@email.com"></ion-input>
+          <br />
           <ion-input class="inputStyles" label-placement="floating" fill="outline" type="password" label="Password" placeholder="********">
             <ion-button fill="clear" slot="end" aria-label="Show/hide">
               <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
             </ion-button>
           </ion-input>
-          <br>
-            <ion-item class="background2">
-              <ion-toggle [checked]="false"></ion-toggle><br /><br />
-              <ion-icon slot="start" name="disc-outline"></ion-icon>
-              <a href="/">Olvide contraseña</a>
-            </ion-item>
-          <label>message successful or error</label>
           <br />
-          <ion-button expand="block" color="primary">Log In</ion-button>
-        </div>
+          <ion-item>
+            <ion-toggle [checked]="false"> </ion-toggle>
+            <ion-icon slot="start" name="scan-outline" style="margin-right: 4px;"></ion-icon>
+            <a href="/bienvenida" style="color: white; text-decoration: none">Olvide mi contraseña</a>
+          </ion-item>
+          <!--<label>{{ loginMessage }}</label>--> <!-- Bind dynamic message here -->
+          <br />
+          <ion-button expand="block" class="custom-button">Log In</ion-button>
+        </ng-container>
 
         <!-- Register Form -->
-        <div *ngIf="segmentValue === 'Register'">
-          <h2 class="titles">Register</h2>
+        <ng-container *ngIf="segmentValue === 'Register'">
+          <h2 class="titles">Sign Up</h2>
           <ion-input class="inputStyles" label-placement="floating" fill="outline" type="text" label="Username" placeholder="Username"></ion-input>
           <br />
-          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="text" label="E-mail" placeholder="example@email.com"></ion-input>
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="email" label="E-mail" placeholder="example@email.com"></ion-input>
           <br />
-          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="password" label="Password" placeholder="********"></ion-input>
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="password" label="Password" placeholder="********">
+            <ion-button fill="clear" slot="end" aria-label="Show/hide">
+              <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+            </ion-button>
+          </ion-input>
           <br />
-          <label>message successful or error</label>
+          <ion-input class="inputStyles" label-placement="floating" fill="outline" type="password" label="Confirm password" placeholder="********">
+            <ion-button fill="clear" slot="end" aria-label="Show/hide">
+              <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+            </ion-button>
+          </ion-input>
           <br />
-          <ion-button expand="block" color="primary">Sign In</ion-button>
-        </div>
+          <!---<label>{{ registerMessage }}</label>--> <!-- Bind dynamic message here -->
+          <br />
+          <ion-button expand="block" class="custom-button">Sign Up</ion-button>
+        </ng-container>
       </ion-col>
     </ion-row>
   </ion-grid>
+</div>
+
 </ion-content>
