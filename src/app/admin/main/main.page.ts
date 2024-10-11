@@ -15,10 +15,10 @@ import { ListAdminComponent } from 'src/app/components/list-admin/list-admin.com
 export class MainPage implements OnInit {
 
   adminItems = [
-    { label: 'Usuarios', icon: 'person-circle-outline', route: '/admin/users' },
-    { label: 'Publicaciones', icon: 'newspaper-outline', route: '/admin/posts' },
-    { label: 'Comentarios', icon: 'chatbubbles-outline', route: '/admin/comments' },
-    { label: 'Categorías', icon: 'list-outline', route: '/admin/categories' },
+    { label: 'Usuarios', icon: '../../../assets/users.svg', route: '/admin/users' },
+    { label: 'Publicaciones', icon: '../../../assets/newspaper.svg', route: '/admin/posts' },
+    { label: 'Comentarios', icon: '../../../assets/comments.svg', route: '/admin/comments' },
+    { label: 'Categorías', icon: '../../../assets/categories.svg', route: '/admin/categories' },
   ];
 
   constructor() { }
