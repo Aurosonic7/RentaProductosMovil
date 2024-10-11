@@ -17,6 +17,7 @@ import {
   IonButton,
   IonImg,
   IonCardContent, IonChip } from '@ionic/angular/standalone';
+import { CardProductoComponent } from "../../components/card-producto/card-producto.component";
 
 @Component({
   selector: 'app-interfaz-productos',
@@ -37,7 +38,7 @@ import {
     IonTitle,
     IonToolbar,
     CommonModule,
-    FormsModule, HeaderComponent],
+    FormsModule, HeaderComponent, CardProductoComponent],
 })
 export class InterfazProductosPage implements OnInit {
   constructor() {

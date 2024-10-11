@@ -1,0 +1,18 @@
+<ion-card>
+  <ion-img class="product-image" src="/src/assets/zelda.png"></ion-img>
+
+  <ion-card-content>
+
+    <div class="card-header">
+      <ion-label class="product-name">Nombre</ion-label>
+      <ion-button shape="round" color="dark">
+        <ion-icon slot="icon-only" name="heart-outline" color=""></ion-icon>
+      </ion-button>
+    </div>
+
+    <ion-label class="product-price">$0</ion-label>
+    <p class="product-description">Esta es una pequeña descripción del producto.</p>
+    <!--<ion-button class="product-category" size="small">Categoría</ion-button> -->
+    <ion-chip class="product-category" [disabled]="false">Categoria</ion-chip>
+  </ion-card-content>
+</ion-card>
