@@ -5,5 +5,9 @@ export const routes: Routes = [
   { path: 'login', loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage) },
   { path: 'register', loadComponent: () => import('./pages/register/register.page').then( m => m.RegisterPage) },
   { path: '', redirectTo: 'bienvenida', pathMatch: 'full', },
-  { path: '', loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes), },
+  { path: '', loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes), },  {
+    path: 'interfaz-productos',
+    loadComponent: () => import('./pages/interfaz-productos/interfaz-productos.page').then( m => m.InterfazProductosPage)
+  },
+
 ];
