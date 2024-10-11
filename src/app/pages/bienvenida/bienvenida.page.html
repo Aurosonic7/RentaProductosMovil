@@ -1,11 +1,28 @@
-<ion-content [fullscreen]="true" >
-  <!-- Centrar el logo en el centro de la pantalla -->
-  <div class="bienvenida-logo">
-    <img src="assets/Logo.png" alt="bienvenida" class="bienvenida-img">
-  </div>
-  <!-- Texto de bienvenida -->
-  <div class="bienvenida-text">
-    <h1>Click&Rent</h1>
-  </div>
+<ion-content [fullscreen]="true" mode="md" class="background" >
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10" offset="1" class="containerForm ion-text-center">
+        <img class="imageLogo" src="assets/Logo2.png" alt="bienvenida" />
+        <br />
+        <ng-container>
+        <h2 class="titles">Enviar correo</h2>
+        <ion-input
+          class="inputStyles"
+          label-placement="floating"
+          fill="outline"
+          type="email"
+          label="E-mail"
+          placeholder="email@email.com"
+        ></ion-input>
+        <br />
+        <h4>Ingrese su correo electrónico para restablecer su contraseña</h4>
+        <br />
+        <ion-button expand="block" class="custom-button">Send</ion-button>
+      </ng-container>
+      <br/>
+        <a href="/login" style="color: white; text-decoration: none">Ingresa a tu cuenta</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
