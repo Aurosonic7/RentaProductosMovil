@@ -16,4 +16,8 @@ export const routes: Routes = [
   { path: 'admin/comments', loadComponent: () => import('./admin/comments/comments.page').then( m => m.CommentsPage)},
   { path: 'admin/categories', loadComponent: () => import('./admin/categories/categories.page').then( m => m.CategoriesPage)},
   { path: 'admin/main', loadComponent: () => import('./admin/main/main.page').then( m => m.MainPage)},
+  {
+    path: 'interfaz-publicacion',
+    loadComponent: () => import('./pages/interfaz-publicacion/interfaz-publicacion.page').then( m => m.InterfazPublicacionPage)
+  },
 ];
