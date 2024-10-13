@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-img src="../.../../assets/zelda.png"></ion-img>
+    <ion-icon name="heart-outline" slot="end" class="favorite-icon"></ion-icon>
+  
+    <ion-card-content>
+
+      <div class="card-header">
+        <ion-label class="product-name">Nombre</ion-label>
+        <ion-button shape="round" color="dark">
+          <ion-icon slot="icon-only" name="heart-outline" color=""></ion-icon>
+        </ion-button>
+      </div>
+
+      <ion-chip color="success" slot="end">
+        Categoría
+      </ion-chip>
+
+      <h2>$0</h2>
+      <p></p>
+      <p>Esta es una pequeña descripción del producto.</p>
+      <p>Cantidad disponible: 100</p>
+  
+      <ion-item>
+        <ion-label position="floating">Cantidad a rentar</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="dark">Agregar al carrito</ion-button>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

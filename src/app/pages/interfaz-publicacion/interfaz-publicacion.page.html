@@ -1,16 +1,11 @@
 <app-header></app-header>>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">interfaz-publicacion</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <ion-card class="add-product-card">
     <ion-card-header>
-      <ion-card-title>Agregar producto</ion-card-title>
       <ion-card-subtitle>Agrega tu producto para rentarlo!</ion-card-subtitle>
+      <ion-card-title>Agregar producto</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
@@ -20,25 +15,26 @@
       </ion-item>
 
 
-        <ion-list>
-          <ion-item>
-            <ion-select label="Categoria del producto" label-placement="stacked">
-              <ion-select-option value="electronicos">Electronicos</ion-select-option>
-              <ion-select-option value="muebles">Muebles</ion-select-option>
-              <ion-select-option value="ropa">Ropa</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-select label="Categoria del producto" label-placement="stacked">
+            <ion-select-option value="electronicos">Electronicos</ion-select-option>
+            <ion-select-option value="muebles">Muebles</ion-select-option>
+            <ion-select-option value="ropa">Ropa</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
 
-    
+
       <ion-item>
         <ion-label position="stacked">Descripción del producto</ion-label>
         <ion-textarea placeholder="Descripción"></ion-textarea>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-checkbox labelPlacement="end">Acepto los <a color="primary" href="#" (click)="$event.stopPropagation()">terminos y condiciones</a></ion-checkbox>
-        <ion-button shape="round" fill="clear" slot="end" color="primary" >
+        <ion-checkbox labelPlacement="end">Acepto los <a color="primary" href="#"
+            (click)="$event.stopPropagation()">terminos y condiciones</a></ion-checkbox>
+        <ion-button shape="round" fill="clear" slot="end" color="primary">
           <ion-icon slot="icon-only" name="image-outline" color="dark"></ion-icon>
         </ion-button>
       </ion-item>

@@ -1,0 +1,14 @@
+<!-- ion-datetime con presentación de calendario -->
+<ion-item>
+<ion-datetime
+    id="date-picker"
+    presentation="date"
+    [value]="selectedDates.start || selectedDates.end"
+    (ionChange)="onDatesSelected($event)"
+    start="2024-01-01"
+    end="2030-12-31"
+    multiple="true"
+    is-open="false"
+    show-default-buttons="true"
+  ></ion-datetime>
+</ion-item>

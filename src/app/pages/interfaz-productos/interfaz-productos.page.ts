@@ -16,7 +16,7 @@ import {
   IonIcon,
   IonButton,
   IonImg,
-  IonCardContent, IonChip } from '@ionic/angular/standalone';
+  IonCardContent, IonChip, IonSearchbar } from '@ionic/angular/standalone';
 import { CardProductoComponent } from "../../components/card-producto/card-producto.component";
 
 @Component({
@@ -24,7 +24,7 @@ import { CardProductoComponent } from "../../components/card-producto/card-produ
   templateUrl: './interfaz-productos.page.html',
   styleUrls: ['./interfaz-productos.page.scss'],
   standalone: true,
-  imports: [IonChip,
+  imports: [IonSearchbar, IonChip,
     IonCardContent,
     IonImg,
     IonButton,

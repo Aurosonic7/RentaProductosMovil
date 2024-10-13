@@ -1,0 +1,54 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="payment-card">
+    <ion-card-header>
+      <a> </a>
+      <ion-card-subtitle>¡Paga la renta del producto seleccionado!</ion-card-subtitle>
+      <ion-card-title>Pagar producto</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="product-details">
+        <ion-thumbnail>
+          <img src="../.../../assets/Kirby.png" alt="Imagen del producto">
+        </ion-thumbnail>
+        <div class="details-text">
+          <p><strong>Nombre:</strong> Nombre</p>
+          <p><strong>Categoría:</strong> Categoría</p>
+          <p><strong>Descripción:</strong> Esta es una descripción del producto.</p>
+        </div>
+      </div>
+
+      <ion-item>
+        <ion-label>Selecciona la fecha de inicio y fin de la renta</ion-label>
+        <!-- Botón de calendario-->
+        <ion-button slot="end" color="ligth" (click)="OpenCalendario()">
+          <ion-icon slot="icon-only" name="calendar-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <!-- Mostrar las fechas seleccionadas -->
+      <div *ngIf="selectedDates.start && selectedDates.end">
+        <p>Fecha de inicio: {{ selectedDates.start | date: 'dd-MM-yyyy' }}</p>
+        <p>Fecha de fin: {{ selectedDates.end | date: 'dd-MM-yyyy' }}</p>
+      </div>
+
+      <div class="price">
+        <p>$00</p>
+      </div>
+
+      <ion-item>
+        <ion-select label="Método de pago" label-placement="stacked" placeholder="Selecciona un metodo de pago">
+          <ion-icon slot="end" name="card-outline"></ion-icon>
+          <ion-select-option value="paypal">Paypal</ion-select-option>
+          <ion-select-option value="cretit-card">Tarjeta de credito</ion-select-option>
+          <ion-select-option value="card">Tarjeta de debito</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="block" color="dark">Pagar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
