@@ -20,10 +20,10 @@ import { Router } from '@angular/router';
 export class UsersPage implements OnInit {
 
   adminItems = [
-    { label: 'Usuarios', icon: '../../../assets/users.svg', route: '/admin/users' },
-    { label: 'Publicaciones', icon: '../../../assets/users.svg', route: '/admin/posts' },
-    { label: 'Comentarios', icon: '../../../assets/users.svg', route: '/admin/comments' },
-    { label: 'Categorías', icon: '../../../assets/users.svg', route: '/admin/categories' },
+    { label: 'Usuario 1', icon: '../../../assets/users.svg', route: '/admin/users' },
+    { label: 'Usuario 2', icon: '../../../assets/users.svg', route: '/admin/posts' },
+    { label: 'Usuario 3', icon: '../../../assets/users.svg', route: '/admin/comments' },
+    { label: 'Usuario 4', icon: '../../../assets/users.svg', route: '/admin/categories' },
   ];
 
 

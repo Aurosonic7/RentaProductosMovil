@@ -1,8 +1,22 @@
 <div class="parent">
   @for(item of adminItems; track $index){
   <ion-button expand="block" class="custom-button" (click)="navigate(item.route)">
-    <ion-icon [src]="item.icon" slot="start" style="color:black"></ion-icon>
-    {{ item.label }}
+    
+    <div [ngClass]="{'grid-container-3': showActionIcons, 'grid-container-2': !showActionIcons}">
+      <div class="left-icon">
+        <ion-icon [src]="item.icon" slot="start" style="color:black"></ion-icon>
+      </div>
+      
+      <div class="button-label">
+        {{ item.label }}
+      </div>
+
+      <div class="action-icons" *ngIf="showActionIcons">
+        <ion-icon name="trash-outline" class="action-icon" ></ion-icon>
+        <ion-icon name="eye-outline" class="action-icon" ></ion-icon>
+      </div>
+    </div>
+    
   </ion-button>
   }
 </div>

@@ -1,44 +1,85 @@
 ion-content {
-    --background: black;
-    position: relative; /* Necesario para el posicionamiento absoluto del hijo */
-    height: 100vh;
-  }
+  --background: black;
+  position: relative;
+  height: 100vh;
+}
+
+.parent {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  line-height: 1em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+.custom-button {
+  --background: #2563eb;
+  --border-radius: 20px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  --color: white;
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  height: 60px;
+  display: block;
+  width: 100%;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Ícono ocupa el espacio necesario, el texto el resto */
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-items: center; /* Centra horizontalmente el contenido del grid */
+  width: 100%; /* Asegura que el contenedor ocupe el 100% del botón */
+}
+
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: 50px 1fr auto; /* 3 columnas: ícono, texto, y botones de acciones */
+  align-items: center;
+  width: 100%;
+}
+
+
+.left-icon {
+  justify-self: start;
   
-  .parent {
-    position: absolute; /* Posicionamiento absoluto */
-    top: 60%; /* Mueve el div a la mitad de la altura */
-    left: 50%; /* Mueve el div a la mitad del ancho */
-    transform: translate(-50%, -50%); /* Centra el div horizontal y verticalmente */
-    background-color: #333; /* Fondo gris oscuro */
-    border-radius: 20px; /* Bordes redondeados */
-    padding: 20px;
-    width: 90%; /* Para darle un tamaño relativo al ancho */
-    max-width: 400px; /* Tamaño máximo */
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espacio entre botones */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor */
-    line-height: 1em;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-  
-  .custom-button {
-    --background: #2563eb; /* Fondo azul para los botones */
-    --border-radius: 20px; /* Bordes redondeados de los botones */
-    --padding-start: 15px;
-    --padding-end: 15px;
-    --color: white; /* Texto blanco */
-    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para los botones */
-    font-size: 18px;
-    height: 60px; /* Altura del botón */
-    display: flex;
-    align-items: center;
-  }
-  
-  ion-icon {
-    font-size: 40px; /* Tamaño de los íconos */
-    margin-right: 40px;
-  }
-  
-  
+}
+
+.button-label {
+  //text-align: start;
+  //padding-left: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action-icons {
+  display: flex;
+  gap: 8px; /* Espacio entre 'ver' y 'borrar' */
+  justify-content: end;
+  align-items: center;
+}
+
+.action-icon {
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Tamaño de íconos principales dentro del botón */
+ion-icon {
+  font-size: 40px;
+  margin-right: 10px;
+}
