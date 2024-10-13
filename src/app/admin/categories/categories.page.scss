@@ -1,0 +1,7 @@
+.back-button {
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    right: 20px; /* Ajusta este valor para mover el botón hacia la derecha */
+    top: 155px; /* Ajusta este valor para bajarlo un poco */
+    z-index: 1; /* Asegúrate de que el botón esté por encima de otros elementos */
+    clip-path: circle(50% at 50% 50%);
+  }

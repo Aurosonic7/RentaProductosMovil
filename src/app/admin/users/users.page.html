@@ -1,9 +1,8 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">users</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-button class="back-button" end (click)="goAdminMain()" >
+    <ion-icon name="arrow-back-outline" style="font-size: 30px;"></ion-icon>
+  </ion-button>
+  <app-list-admin [adminItems]="adminItems"></app-list-admin>
 </ion-content>
