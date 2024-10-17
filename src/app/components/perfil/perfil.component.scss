@@ -1,0 +1,67 @@
+ion-content {
+    --background: #000;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+  }
+  
+  .tituloSegment {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center; /* Alinea el título en el centro */
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Mantén la imagen redonda */
+    margin-bottom: 20px; /* Espaciado debajo de la imagen */
+  }
+  
+  .inputStyles, .textareaStyles {
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: bold;
+    --border-color: white;
+    --border-width: 2px;
+    --background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .textareaStyles {
+    height: 100px; /* Ajusta la altura del textarea */
+  }
+  
+  .centered-item {
+    width: 100%; /* Hace que los inputs ocupen el 100% del ancho */
+    max-width: 400px; /* Limita el ancho máximo para los inputs */
+  }
+  
+  .custom-button {
+    --background: #2563eb;
+    --border-radius: 20px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    --color: white;
+    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    height: 60px;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho */
+    max-width: 400px; /* Limita el ancho máximo del botón */
+    margin-top: 100px;
+  }
+  
+  .back-button {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    z-index: 1;
+    clip-path: circle(50% at 50% 50%);
+  }
+  

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, ModalController } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { PerfilComponent } from '../perfil/perfil.component';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,14 @@ import { CommonModule } from '@angular/common';
 
 export class HeaderComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
+
+  async openProfileModal() {
+    const modal = await this.modalCtrl.create({
+      component: PerfilComponent, // El componente que representará el modal
+    });
+    return await modal.present();
+  }
 
   ngOnInit() {}
 

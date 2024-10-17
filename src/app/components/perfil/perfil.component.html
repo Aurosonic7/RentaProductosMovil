@@ -1,0 +1,30 @@
+
+<ion-button class="back-button" end (click)="goBack()">
+    <ion-icon name="arrow-back-outline" style="font-size: 30px;"></ion-icon>
+</ion-button>
+<ion-content [fullscreen]="true" mode="md">
+  <div class="content-container">
+    <h5 class="tituloSegment">Mi perfil</h5>
+    
+      <img src="../../../assets/personperfil.png" alt="Profile" width="150" height="150"/>
+    
+    <br />
+    <ion-item class="centered-item">
+      <ion-input class="inputStyles" label-placement="floating" fill="outline" label="Username" value="user123" readonly></ion-input>
+    </ion-item>
+    <br />
+    <ion-item class="centered-item">
+      <ion-input class="inputStyles" label-placement="floating" fill="outline" label="E-mail" value="example@hotmail.com" readonly></ion-input>
+    </ion-item>
+    <br />
+    <ion-item class="centered-item">
+      <ion-input class="inputStyles" label-placement="floating" fill="outline" label="Telefono" value="+52 951 123 45 67" readonly></ion-input>
+    </ion-item>
+    <br />
+    <ion-item class="centered-item">
+      <ion-textarea class="textareaStyles" label-placement="floating" fill="outline" label="Bio" value="Esta es una biografia prerecargada" readonly></ion-textarea>
+    </ion-item>
+    <br />
+    <ion-button expand="block" class="custom-button">Cerrar sesión</ion-button>
+  </div>
+</ion-content>
