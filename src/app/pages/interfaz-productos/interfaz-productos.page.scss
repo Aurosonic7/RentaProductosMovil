@@ -1,14 +1,18 @@
-.chip-container {
-    display: flex;
-    justify-content: start;  // Alinea las chips al principio
-    gap: 0px;  // Espacio entre las chips
-    margin-bottom: 15px;  // Espacio entre las chips y las tarjetas
-    padding: 0 40px;  
+ion-content {
+  --background: #000; /* Establece el fondo de ion-content a negro */
+  color: white; /* Cambia el color del texto a blanco para contrastar con el fondo negro */
 }
-  
-  ion-chip {
-    --color: var(--ion-color-dark);
-    --border-color: var(--ion-color-light);
-    --background: transparent;
-  }
-  
+
+.chip-container {
+  display: flex;
+  justify-content: start; /* Alinea las chips al principio */
+  gap: 0px; /* Espacio entre las chips */
+  margin-bottom: 15px; /* Espacio entre las chips y las tarjetas */
+  padding: 0 40px;  
+}
+
+ion-chip {
+  --color: var(--ion-color-light); /* Cambia el color del texto de las chips a blanco */
+  --border-color: var(--ion-color-light); /* Color del borde de las chips */
+  --background: transparent; /* Fondo transparente */
+}

@@ -5,13 +5,14 @@ import { IonSelectOption,IonSelect,IonContent, IonHeader, IonTitle, IonToolbar, 
 import { HeaderComponent } from "../../components/header/header.component";
 import { imageOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-interfaz-publicacion',
   templateUrl: './interfaz-publicacion.page.html',
   styleUrls: ['./interfaz-publicacion.page.scss'],
   standalone: true,
-  imports: [IonList, IonSelectOption,IonSelect,IonNote, IonIcon, IonButton, IonCheckbox, IonTextarea, IonInput, IonLabel, IonItem, IonCardContent, IonCardSubtitle, IonCardHeader, IonCardTitle, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent]
+  imports: [NavbarComponent,IonList, IonSelectOption,IonSelect,IonNote, IonIcon, IonButton, IonCheckbox, IonTextarea, IonInput, IonLabel, IonItem, IonCardContent, IonCardSubtitle, IonCardHeader, IonCardTitle, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent]
 })
 export class InterfazPublicacionPage implements OnInit {
 

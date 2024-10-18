@@ -7,6 +7,7 @@ import { addIcons } from 'ionicons';
 import { ModalController} from '@ionic/angular';
 import { calendar, calendarOutline, card, carOutline, cardOutline } from 'ionicons/icons';
 import { ModalCalendarioComponent } from 'src/app/components/modal-calendario/modal-calendario.component';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-interfaz-pago-producto',
@@ -14,7 +15,7 @@ import { ModalCalendarioComponent } from 'src/app/components/modal-calendario/mo
   styleUrls: ['./interfaz-pago-producto.page.scss'],
   standalone: true,
   providers: [ModalController],
-  imports: [IonDatetime, IonSelectOption,IonSelect,IonThumbnail,IonButton, IonIcon, IonLabel, IonItem, IonCardContent, IonCardTitle, IonCardSubtitle, IonCardHeader, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent]
+  imports: [NavbarComponent,IonDatetime, IonSelectOption,IonSelect,IonThumbnail,IonButton, IonIcon, IonLabel, IonItem, IonCardContent, IonCardTitle, IonCardSubtitle, IonCardHeader, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent]
 })
 export class InterfazPagoProductoPage implements OnInit {
 selectedDates: any;

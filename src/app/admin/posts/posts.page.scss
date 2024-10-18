@@ -5,3 +5,7 @@
     z-index: 1; /* Asegúrate de que el botón esté por encima de otros elementos */
     clip-path: circle(50% at 50% 50%);
   }
+
+  ion-content {
+    --background: #000; /* Cambia el color de fondo del ion-content */
+  }

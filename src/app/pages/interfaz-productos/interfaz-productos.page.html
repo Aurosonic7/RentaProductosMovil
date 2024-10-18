@@ -1,18 +1,17 @@
-<app-header> Interfaz productos</app-header>
+<app-header></app-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
   <div class="chip-container">
     <ion-chip outline>productos</ion-chip>
     <ion-chip outline>categoria</ion-chip>
   </div>
   
-  <ion-list>
     <app-card-producto></app-card-producto>
     <app-card-producto></app-card-producto>
     <app-card-producto></app-card-producto>
     <app-card-producto></app-card-producto>
     <app-card-producto></app-card-producto>
-  </ion-list>
-
 </ion-content>
+
+<app-navbar></app-navbar>

@@ -4,41 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { addIcons } from 'ionicons';
 import { heart, heartOutline } from 'ionicons/icons';
 import { HeaderComponent } from "../../components/header/header.component";
-import {
-  IonContent,
-  IonHeader,
-  IonTitle,
-  IonToolbar,
-  IonList,
-  IonCard,
-  IonItem,
-  IonLabel,
-  IonIcon,
-  IonButton,
-  IonImg,
-  IonCardContent, IonChip, IonSearchbar } from '@ionic/angular/standalone';
 import { CardProductoComponent } from "../../components/card-producto/card-producto.component";
-
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
+import { IonicModule } from '@ionic/angular';
 @Component({
   selector: 'app-interfaz-productos',
   templateUrl: './interfaz-productos.page.html',
   styleUrls: ['./interfaz-productos.page.scss'],
   standalone: true,
-  imports: [IonSearchbar, IonChip,
-    IonCardContent,
-    IonImg,
-    IonButton,
-    IonIcon,
-    IonLabel,
-    IonItem,
-    IonCard,
-    IonList,
-    IonContent,
-    IonHeader,
-    IonTitle,
-    IonToolbar,
-    CommonModule,
-    FormsModule, HeaderComponent, CardProductoComponent],
+  imports: [IonicModule,
+  CommonModule,
+    FormsModule, HeaderComponent, CardProductoComponent, NavbarComponent],
 })
 export class InterfazProductosPage implements OnInit {
   constructor() {

@@ -12,9 +12,9 @@ export const routes: Routes = [
           import('../pages/bienvenida/bienvenida.page').then((m) => m.BienvenidaPage),  
       },
       {
-        path: 'tab1',
+        path: 'interfaz-productos',
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../pages/interfaz-productos/interfaz-productos.page').then((m) => m.InterfazProductosPage),
       },
       {
         path: 'tab2',
@@ -35,7 +35,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: 'tabs',
     pathMatch: 'full',
   },
 ];

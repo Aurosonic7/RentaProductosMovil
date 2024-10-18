@@ -5,13 +5,14 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonImg, IonIcon, 
 import { HeaderComponent } from "../../components/header/header.component";
 import { addIcons } from 'ionicons';
 import { heart, heartOutline } from 'ionicons/icons';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-interfaz-ver-producto',
   templateUrl: './interfaz-ver-producto.page.html',
   styleUrls: ['./interfaz-ver-producto.page.scss'],
   standalone: true,
-  imports: [IonButton, IonInput, IonItem, IonChip, IonLabel, IonCardContent, IonIcon, IonImg, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent]
+  imports: [NavbarComponent,IonButton, IonInput, IonItem, IonChip, IonLabel, IonCardContent, IonIcon, IonImg, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent]
 })
 export class InterfazVerProductoPage implements OnInit {
 

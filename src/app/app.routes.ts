@@ -19,7 +19,8 @@ export const routes: Routes = [
   {
     path: 'interfaz-publicacion',
     loadComponent: () => import('./pages/interfaz-publicacion/interfaz-publicacion.page').then( m => m.InterfazPublicacionPage)
-  },  {
+  },
+  {
     path: 'interfaz-pago-producto',
     loadComponent: () => import('./pages/interfaz-pago-producto/interfaz-pago-producto.page').then( m => m.InterfazPagoProductoPage)
   },
